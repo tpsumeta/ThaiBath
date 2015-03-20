@@ -1,18 +1,15 @@
 # ThaiBath
 javascript แปลงค่าเงินจากตัวเลขเป็นตัวหนังสือ
 
-## ตัวอย่างโค้ด
+## ตัวอย่าง
+### แปลงฮินดูเป็นตัวหนังสือ
+ArabicNumberToText('777'); //  เจ็ดร้อยเจ็ดสิบเจ็ดบาทถ้วน
+ArabicNumberToText(777); //  เจ็ดร้อยเจ็ดสิบเจ็ดบาทถ
+ArabicNumberToText('1,234'); //  หนึ่งพันสองร้อยสามสิบสี่บาทถ้วน
+ArabicNumberToText('1,234.56'); //  หนึ่งพันสองร้อยสามสิบสี่บาทห้าสิบหกสตางค์
+ArabicNumberToText('123.56บาท'); //  หนึ่งร้อยยี่สิบสามบาทห้าสิบหกสตางค์างค์
+### แปลงตัวเลขไทยเป็นตัวหนังสือ
+ThaiNumberToText('๑๐');  //  สิบบาทถ้วน
+ThaiNumberToText('๗๗๗');  //  เจ็ดร้อยเจ็ดสิบเจ็ดบาท
+ArabicNumberToText('๑๒๓.๘๗'); //  เหนึ่งร้อยยี่สิบสามบาทแปดสิบเจ็ดสตางค์
 
-
-	<script type="text/javascript">
-		function myFunction(){
-			var monney = document.getElementById("number").value;
-			var thaibath = ArabicNumberToText(monney);
-			document.getElementById("text").innerHTML  = thaibath;
-		}
-		function myFunction2(){
-			var monney = document.getElementById("number").value;
-			var thaibath = ThaiNumberToText(monney);
-			document.getElementById("text").innerHTML  = thaibath;
-		}
-	</script>

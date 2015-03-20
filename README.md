@@ -7,7 +7,12 @@ javascript แปลงค่าเงินจากตัวเลขเป็
 	<script type="text/javascript">
 		function myFunction(){
 			var monney = document.getElementById("number").value;
-			var thaibath = ThaiBaht(monney);
+			var thaibath = ArabicNumberToText(monney);
+			document.getElementById("text").innerHTML  = thaibath;
+		}
+		function myFunction2(){
+			var monney = document.getElementById("number").value;
+			var thaibath = ThaiNumberToText(monney);
 			document.getElementById("text").innerHTML  = thaibath;
 		}
 	</script>

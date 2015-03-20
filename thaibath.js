@@ -1,18 +1,23 @@
 // "use strict";
-function ThaiBaht(Number)
+
+function ThaiNumberToText(Number)
 {
-	var decimal = false;
-	Number = Number.toString();						
-	Number = Number.replace (/ |,|บาท|฿/gi,'');  		
-	for (var i = 0; i < Number.length; i++)
-	{
-		if(Number[i] =='.'){
-			decimal = true;
-		}
-	}
-	if(decimal == false){
-		Number = Number+'.00';
-	}
+	Number = Number.replace (/๐/gi,'0');  
+	Number = Number.replace (/๑/gi,'1');  
+	Number = Number.replace (/๒/gi,'2');
+	Number = Number.replace (/๓/gi,'3');
+	Number = Number.replace (/๔/gi,'4');
+	Number = Number.replace (/๕/gi,'5');
+	Number = Number.replace (/๖/gi,'6');
+	Number = Number.replace (/๗/gi,'7');
+	Number = Number.replace (/๘/gi,'8');
+	Number = Number.replace (/๙/gi,'9');
+	return 	ArabicNumberToText(Number);
+}
+
+function ArabicNumberToText(Number)
+{
+	var Number = CheckNumber(Number);
 	var NumberArray = new Array ("ศูนย์", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า", "สิบ");
 	var DigitArray = new Array ("", "สิบ", "ร้อย", "พัน", "หมื่น", "แสน", "ล้าน");
 	var BahtText = "";
@@ -90,4 +95,20 @@ function ThaiBaht(Number)
 			return BahtText;
 		}
 	}
+}
+
+function CheckNumber(Number){
+	var decimal = false;
+	Number = Number.toString();						
+	Number = Number.replace (/ |,|บาท|฿/gi,'');  		
+	for (var i = 0; i < Number.length; i++)
+	{
+		if(Number[i] =='.'){
+			decimal = true;
+		}
+	}
+	if(decimal == false){
+		Number = Number+'.00';
+	}
+	return Number
 }

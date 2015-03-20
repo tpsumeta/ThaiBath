@@ -1,8 +1,16 @@
 # ThaiBath
 javascript แปลงค่าเงินจากตัวเลขเป็นตัวหนังสือ
+## การใช้งาน 
+###### include ไฟล์ thaibath.js เข้ามาไว้ใน page
+  ``` <script src="thaibath.js" type="text/javascript" charset="utf-8"></script>  ```
+###### เรียกใช้
+  ```  var thaibath = ArabicNumberToText('546');  ```
+  // thaibath = ห้าร้อยสี่สิบหกบาทถ้วน
+
+######  กำหนด head ของ html เป็น utf-8 
+  ``` <meta charset="UTF-8">  ```
 
 ## ตัวอย่าง
-
 ### แปลงฮินดูเป็นตัวหนังสือ
 * ArabicNumberToText('777'); //  เจ็ดร้อยเจ็ดสิบเจ็ดบาทถ้วน
 * ArabicNumberToText(777); //  เจ็ดร้อยเจ็ดสิบเจ็ดบาทถ

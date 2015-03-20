@@ -1,9 +1,16 @@
 # ThaiBath
 javascript แปลงค่าเงินจากตัวเลขเป็นตัวหนังสือ
 
-ตัวอย่างโค้ด
+## ตัวอย่างโค้ด
 
-<script src="thaibath.js" type="text/javascript" charset="utf-8"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo thaibath</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script src="thaibath.js" type="text/javascript" charset="utf-8"></script>
 	<input type="text" id="number"  placeholder="">
 	<button type="button" onclick="myFunction()">แปลง</button>
 	<p id="text">ตัวอักษร</p>
@@ -15,3 +22,6 @@ javascript แปลงค่าเงินจากตัวเลขเป็
 			document.getElementById("text").innerHTML  = thaibath;
 		}
 	</script>
+
+</body>
+</html>

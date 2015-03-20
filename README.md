@@ -3,18 +3,7 @@ javascript แปลงค่าเงินจากตัวเลขเป็
 
 ## ตัวอย่างโค้ด
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Demo thaibath</title>
-	<meta charset="UTF-8">
-</head>
-<body>
-	<script src="thaibath.js" type="text/javascript" charset="utf-8"></script>
-	<input type="text" id="number"  placeholder="">
-	<button type="button" onclick="myFunction()">แปลง</button>
-	<p id="text">ตัวอักษร</p>
-	
+
 	<script type="text/javascript">
 		function myFunction(){
 			var monney = document.getElementById("number").value;
@@ -22,6 +11,3 @@ javascript แปลงค่าเงินจากตัวเลขเป็
 			document.getElementById("text").innerHTML  = thaibath;
 		}
 	</script>
-
-</body>
-</html>
